@@ -7,7 +7,7 @@ return [
         'displayErrorDetails' => true,
 
         'ongkir' => [
-            'base_uri' => $_ENV['RAJAONGKIR_BASE_URI'],
+            'base_uri' => 'http://pro.rajaongkir.com/api/',
             'headers' => [
                 'key' => $_ENV['RAJAONGKIR_API_KEY']
             ],

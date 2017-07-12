@@ -6,6 +6,10 @@
 |--------------------------------------------------------------------------
 */
 
+$app->get('/', function ($request, $response) {
+    return ':)';
+});
+
 $app->group('/api', function () use ($app) {
     $app->get('/province', 'OngkirController:province');
     $app->get('/city', 'OngkirController:city');

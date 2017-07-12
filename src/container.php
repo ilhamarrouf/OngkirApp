@@ -12,7 +12,7 @@ $container['client'] = function ($container) {
     $settings = $container->get('settings')['ongkir'];
 
     return new GuzzleHttp\Client([
-        'base_uri' => $settings['base_uri'],
+        'base_uri' => 'http://pro.rajaongkir.com/api/',
         'headers'  => $settings['headers'],
     ]);
 };  

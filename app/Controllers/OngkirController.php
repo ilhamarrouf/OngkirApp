@@ -6,6 +6,9 @@ use GuzzleHttp\Exception\BadResponseException as GuzzleException;
 
 class OngkirController extends Controller
 {
+    /**
+     * Method "province" digunakan untuk mendapatkan daftar propinsi yang ada di Indonesia.
+     */
     public function province($request, $response)
     {
         try {
@@ -17,6 +20,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method "city" digunakan untuk mendapatkan daftar kota/kabupaten yang ada di Indonesia.
+     */
     public function city($request, $response)
     {
         try {
@@ -28,6 +34,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method "subdistrict" digunakan untuk mendapatkan daftar kecamatan yang ada di Indonesia.
+     */
     public function subdistrict($request, $response)
     {
         try {
@@ -39,6 +48,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method “cost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) dari dan ke kecamatan tujuan tertentu dengan berat tertentu pula.
+     */
     public function cost($request, $response)
     {
         try {
@@ -59,6 +71,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method "internationalOrigin" digunakan untuk mendapatkan daftar/nama kota yang mendukung pengiriman internasional.
+     */
     public function internationalOrigin($request, $response)
     {
         try {
@@ -70,6 +85,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method "internationalDestination" digunakan untuk mendapatkan daftar/nama negara tujuan pengiriman internasional.
+     */
     public function internationalDestination($request, $response)
     {
         try {
@@ -81,6 +99,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method “internationalCost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) internasional dari kota-kota di Indonesia ke negara tujuan di seluruh dunia.
+     */
     public function internationalCost($request, $response)
     {
         try {
@@ -99,6 +120,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method "currency" digunakan untuk mendapatkan informasi nilai tukar rupiah terhadap US dollar.
+     */
     public function currency($request, $response)
     {
         try {
@@ -110,6 +134,9 @@ class OngkirController extends Controller
         return $response;
     }
 
+    /**
+     * Method “waybill” untuk digunakan melacak/mengetahui status pengiriman berdasarkan nomor resi.
+     */
     public function waybill($request, $response)
     {
         try {
