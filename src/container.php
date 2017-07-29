@@ -15,7 +15,7 @@ $container['client'] = function ($container) {
         'base_uri' => 'http://pro.rajaongkir.com/api/',
         'headers'  => $settings['headers'],
     ]);
-};  
+};
 
 /*
 |--------------------------------------------------------------------------
