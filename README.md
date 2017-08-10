@@ -13,7 +13,8 @@ Method "province" digunakan untuk mendapatkan daftar propinsi yang ada di Indone
 #### CURL Examples
 ```
 curl --request GET \
-  --url 'http://cekongkir.mlopp.com/api/province?id=12'
+  --url 'http://cekongkir.mlopp.com/api/province?id=12' \
+  --header 'accept: application/json'
 ```
 
 #### Success Response
@@ -51,7 +52,8 @@ Method "city" digunakan untuk mendapatkan daftar kota/kabupaten yang ada di Indo
 #### CURL Examples
 ```
 curl --request GET \
-  --url 'http://cekongkir.mlopp.com/api/city?id=39&province=5'
+  --url 'http://cekongkir.mlopp.com/api/city?id=39&province=5' \
+  --header 'accept: application/json'
 ```
 
 #### Success Response
@@ -94,7 +96,8 @@ Method "subdistrict" digunakan untuk mendapatkan daftar kecamatan yang ada di In
 #### CURL Examples
 ```
 curl --request GET \
-  --url 'http://cekongkir.mlopp.com/api/subdistrict?city=39'
+  --url 'http://cekongkir.mlopp.com/api/subdistrict?city=39' \
+  --header 'accept: application/json'
 ```
 
 #### Success Response
@@ -293,6 +296,7 @@ Method “cost” digunakan untuk mengetahui tarif pengiriman (ongkos kirim) dar
 ```
 curl --request POST \
   --url http://cekongkir.mlopp.com/api/cost \
+  --header 'accept: application/json' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'origin=501&originType=city&destination=574&destinationType=subdistrict&weight=1700&courier=jne'
 ```
@@ -419,7 +423,8 @@ Method "internationalOrigin" digunakan untuk mendapatkan daftar/nama kota yang m
 #### CURL Examples
 ```
 curl --request GET \
-  --url 'http://cekongkir.mlopp.com/api/internationalOrigin?id=152&province=6'
+  --url 'http://cekongkir.mlopp.com/api/internationalOrigin?id=152&province=6' \
+  --header 'accept: application/json'
 ```
 
 #### Success Response
@@ -463,7 +468,8 @@ Method "internationalDestination" digunakan untuk mendapatkan daftar/nama negara
 #### CURL Examples
 ```
 curl --request GET \
-  --url 'http://cekongkir.mlopp.com/api/internationalDestination?id=108'
+  --url 'http://cekongkir.mlopp.com/api/internationalDestination?id=108' \
+  --header 'accept: application/json'
 ```
 
 #### Success Response
@@ -507,6 +513,7 @@ Method “internationalCost” digunakan untuk mengetahui tarif pengiriman (ongk
 ```
 curl --request POST \
   --url http://cekongkir.mlopp.com/api/internationalCost \
+  --header 'accept: application/json' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'origin=152&destination=108&weight=1400&courier=pos'
 ```
@@ -619,6 +626,7 @@ Method “waybill” untuk digunakan melacak/mengetahui status pengiriman berdas
 ```
 curl --request POST \
   --url http://cekongkir.mlopp.com/api/waybill \
+  --header 'accept: application/json' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'waybill=SOCAG00183235715&courier=jne'
 ```
