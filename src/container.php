@@ -1,7 +1,5 @@
 <?php
 
-$container = $app->getContainer();
-
 /*
 |--------------------------------------------------------------------------
 | Registered Container Service

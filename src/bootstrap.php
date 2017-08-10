@@ -3,8 +3,8 @@
 require __DIR__ . './../vendor/autoload.php';
 
 try {
-    (new Dotenv\Dotenv(__DIR__.'/../'))->load();
-} catch (Dotenv\Exception\InvalidPathException $e) {
+    (new \Dotenv\Dotenv(__DIR__.'/../'))->load();
+} catch (\Dotenv\Exception\InvalidPathException $e) {
     //
 }
 
@@ -16,13 +16,15 @@ $settings = require __DIR__ . './../src/settings.php';
 |--------------------------------------------------------------------------
 */
 
-$app = new Slim\App($settings);
+$app = new \Slim\App($settings);
 
 /*
 |--------------------------------------------------------------------------
-| Load The Container Services
+| Initialization and Load Container Services
 |--------------------------------------------------------------------------
 */
+
+$container = $app->getContainer();
 
 require __DIR__ . './../src/container.php';
 
@@ -32,4 +34,10 @@ require __DIR__ . './../src/container.php';
 |--------------------------------------------------------------------------
 */
 
-require __DIR__ . './../src/routes.php';
+$app->group('', function () use ($app) {
+    require __DIR__ . './../src/routesWeb.php';
+});
+
+$app->group('/api', function () use ($app) {
+    require __DIR__ . './../src/routesAPI.php';
+})->add(new \App\Middlewares\ApiRoute($container));
