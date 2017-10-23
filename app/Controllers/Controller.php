@@ -6,6 +6,7 @@ namespace App\Controllers;
 * 
 */
 abstract class Controller
+/*ini controller*/
 {
     protected $container;
 
