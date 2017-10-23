@@ -1,3 +1,6 @@
+# OngkirApp
+OngkirApp menyediakan RESTful API (Application Programming Interface) yang dapat Anda pakai untuk membuat berbagai macam aplikasi yang membutuhkan data ongkos kirim. Layanan ini memanfaatkan API dari RajaOngkir.com sehingga data yang diberikan bisa terjamin akurasinya.
+
 ## 1. Province
 Method "province" digunakan untuk mendapatkan daftar propinsi yang ada di Indonesia.
 
